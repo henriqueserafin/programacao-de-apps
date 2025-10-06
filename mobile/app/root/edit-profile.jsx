@@ -44,11 +44,9 @@ const EditProfileScreen = () => {
     setIsLoading(true);
     
     try {
-      // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      // Here would be the actual API call to update the profile
-      // For now, we'll just show success message
+    
       
       Alert.alert(
         "Sucesso", 
@@ -71,7 +69,7 @@ const EditProfileScreen = () => {
     <View style={styles.container}>
       {/* HEADER */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+        <TouchableOpacity style={styles.backButton} onPress={() => router.push('/')}>
           <Ionicons name="arrow-back" size={24} color={COLORS.text} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Editar Perfil</Text>
